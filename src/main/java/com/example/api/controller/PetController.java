@@ -33,9 +33,10 @@ public class PetController extends BaseController {
 
     @ApiOperation(value = "Add a new pet to the store", response = PetResource.class)
     @ApiResponses(value = { @ApiResponse(code = 405, message = "Invalid input") })
+    @ApiImplicitParams({@ApiImplicitParam(name = "body", value = "Pet object that needs to be updated in the store", required = true, dataType = "PetResource", paramType = "body")})
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response create(@Context UriInfo info, @ApiParam(value = "Pet object that needs to be added to the store", required = true) Pet pet) {
+    public Response create(@Context UriInfo info, Pet pet) {
         pet = petService.save(pet);
         PetResource resource = new PetResource(info, pet);
         return created(resource);
