@@ -36,7 +36,7 @@ public class PetController extends BaseController {
     @ApiImplicitParams({@ApiImplicitParam(name = "body", value = "Pet object that needs to be updated in the store", required = true, dataType = "PetResource", paramType = "body")})
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response create(@Context UriInfo info, Pet pet) {
+    public Response create(@Context UriInfo info, @ApiParam(access = "internal") Pet pet) {
         pet = petService.save(pet);
         PetResource resource = new PetResource(info, pet);
         return created(resource);

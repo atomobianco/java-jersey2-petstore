@@ -26,8 +26,12 @@
             <param-value>2.0</param-value>
         </init-param>
         <init-param>
-            <param-name>api.basepath</param-name>
+            <param-name>swagger.api.basepath</param-name>
             <param-value>http://localhost:8080</param-value>
+        </init-param>
+        <init-param>
+            <param-name>swagger.filter</param-name>
+            <param-value>com.example.api.util.ApiSpecFilter</param-value>
         </init-param>
         <load-on-startup>2</load-on-startup>
     </servlet>
