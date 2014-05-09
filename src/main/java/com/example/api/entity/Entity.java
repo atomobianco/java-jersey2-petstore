@@ -6,14 +6,16 @@ package com.example.api.entity;
 public abstract class Entity {
 
     private String id;
+    private String type;
 
+    /* Constructors */
     public Entity(){}
 
-    public String getId() {
-        return id;
-    }
+    /* Getters */
+    public String   getId() { return id; }
+    public String   getType() { return type; }
 
-    public void setId(String id) {
-        this.id = id;
-    }
+    /* Setters */
+    public void     setId(String id) { this.id = id; }
+    public void     setType(String type) { this.type = type; }
 }

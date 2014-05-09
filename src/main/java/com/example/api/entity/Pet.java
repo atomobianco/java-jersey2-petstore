@@ -11,6 +11,8 @@ public class Pet extends Entity {
     private List<Tag> tags = new ArrayList<Tag>();
     private String status;
 
+    public Pet() { this.setType("pet"); }
+
     public Category getCategory() {return category;}
     public void setCategory(Category category) {this.category = category;}
 

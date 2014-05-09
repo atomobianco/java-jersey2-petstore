@@ -21,6 +21,7 @@ public class Link extends LinkedHashMap {
     public Link(String fqBasePath, Entity entity) {
         String href = createHref(fqBasePath, entity);
         put("href", href);
+        if (entity.getType() != null) put("type", entity.getType());
     }
 
     public Link(UriInfo info, String subPath) {
@@ -31,6 +32,8 @@ public class Link extends LinkedHashMap {
         String href = fqBasePath + subPath;
         put("href", href);
     }
+
+    public String getHref() { return (String) get("href"); }
 
     protected static String getFullyQualifiedContextPath(UriInfo info) {
         String fq = info.getBaseUri().toString();
@@ -47,8 +50,5 @@ public class Link extends LinkedHashMap {
         return sb.toString();
     }
 
-    public String getHref() {
-        return (String)get("href");
-    }
 
 }
