@@ -6,6 +6,10 @@
 
     <display-name>PetStore</display-name>
 
+    <listener>
+        <listener-class>com.example.api.util.ApiServletContextListener</listener-class>
+    </listener>
+
     <servlet>
         <servlet-name>PetStore</servlet-name>
         <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
