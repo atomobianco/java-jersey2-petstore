@@ -17,7 +17,7 @@ public class Link extends LinkedHashMap {
     public static final String USERS = PATH_SEPARATOR + "users";
     public static final String PETS  = PATH_SEPARATOR + "pets";
 
-    @ApiModelProperty(value = "Link URL", position = 1) public String getHref() { return (String) get("href"); }
+    @ApiModelProperty(value = "Link URL",  position = 1) public String getHref() { return (String) get("href"); }
     @ApiModelProperty(value = "Link type", position = 2) public String getType() { return (String) get("type"); }
 
     public Link(UriInfo info, Entity entity) {

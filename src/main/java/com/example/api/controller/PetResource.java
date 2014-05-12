@@ -10,8 +10,8 @@ import java.util.LinkedHashMap;
 @ApiModel(value = "Pet", description = "Pet resource", parent = LinkedHashMap.class)
 public class PetResource extends Link {
 
-    @ApiModelProperty(value = "Pet URL", position = 1) public String getHref() { return super.getHref(); }
-    @ApiModelProperty(value = "Pet name", position = 2) public String getName() { return (String) get("name"); }
+    @ApiModelProperty(value = "Pet URL",      position = 1) public String getHref() { return super.getHref(); }
+    @ApiModelProperty(value = "Pet name",     position = 2) public String getName() { return (String) get("name"); }
     @ApiModelProperty(value = "Pet category", position = 3) public String getCategory() { return (String) get("category"); }
 
     public PetResource(UriInfo info, Pet pet) {
